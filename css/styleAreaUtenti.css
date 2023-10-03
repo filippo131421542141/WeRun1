@@ -1,0 +1,576 @@
+@import url("https://unpkg.com/css.gg@2.0.0/icons/css/add-r.css");
+:root{
+  --blu:#222ba6;
+--verdeAcqua: #22A699;
+--giallo:#F2BE22;
+--arancione:#F29727;
+--rossoChiaro:#F24C3D;
+--rossoScuro:#c21c0d;
+
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+}
+.sTipiCorse {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.tipoCorsa {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+   -webkit-box-shadow: 7px 7px 25px -1px rgba(0,0,0,0.59); 
+box-shadow: 7px 7px 25px -1px rgba(0,0,0,0.59);
+border-radius: 5px;
+padding: 2%;
+max-height: 60vh;
+overflow-x: scroll;
+}
+.tipoCorsa legend {
+  font-size: 2rem;
+  width: auto;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color:inherit;
+  
+
+}
+.sTipiCorse .tipoCorsa{
+  position: sticky;
+  top: 0 ;
+}
+.sTipiCorse.tipoCorsa .statisticheMedie{
+  position: sticky;
+  top: 0;
+}
+button{
+     background-color: transparent;
+     border: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.gg-add-r {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  transform: scale(var(--ggs, 1));
+  border-radius: 4px;
+ 
+}
+
+.gg-add-r::after,
+.gg-add-r::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 5px;
+  top: 8px;
+  left: 4px;
+}
+
+.gg-add-r::after {
+  width: 2px;
+  height: 10px;
+  top: 4px;
+  left: 8px;
+}
+
+.tipoCorsa:nth-child(1){
+background-color:#6efaeb
+;
+}
+.tipoCorsa:nth-child(2){
+background-color:#74f0cd
+;
+}
+.tipoCorsa:nth-child(3){
+background-color:#81e5ae
+;
+}
+.tipoCorsa:nth-child(4){
+background-color:#8fd890
+;
+}
+.tipoCorsa:nth-child(5){
+background-color:#9ecb74
+;
+}
+
+.tipoCorsa:nth-child(6){
+background-color:#adbc5c
+;
+}
+.tipoCorsa:nth-child(7){
+background-color:#baac4a;
+}
+
+.tipoCorsa:nth-child(8){
+background-color:#c59b3e;
+}
+.tipoCorsa:nth-child(9){
+background-color:#cf893a
+;
+}
+.tipoCorsa:nth-child(10){
+background-color:#d6763e;
+}
+.tipoCorsa:nth-child(11){
+background-color:#d96247;
+}
+.tipoCorsa:nth-child(12){
+background-color:#d94747;
+}
+.percorsi{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.statisticheMedie{
+display: flex;
+flex-direction: row;
+gap: 2rem;
+}
+.statisticheMedie div{
+  display: flex;
+gap: 5px;
+}
+.intestazionePercorsi{
+  font-size: 1.5rem;
+}
+.rigaNomePercorso{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  
+}
+.rigaNomePercorso .cellaTempo{
+font-style: italic;
+font-size: 1.4rem;
+-webkit-box-shadow: 7px 7px 26px -4px rgba(0,0,0,0.41); 
+box-shadow: 7px 7px 26px -4px rgba(0,0,0,0.41);
+border-radius: 5px;
+padding: 2%;
+}
+/* btnAggiungiPercorso */
+.btnNewPercorso ,.btnConferma {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ font-size: 16px;
+ font-weight: 400;
+ padding: 1%;
+ color: black;
+ border: 0px solid;
+ background-image:  radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+ background-size: 500% 400%;
+
+ border-radius: 50px;
+ transition: 0.6s all;
+}
+
+.btnNewPercorso:hover ,.btnConferma:hover{
+ background-position: 75% 50%;
+ transform: perspective(100px);
+ color: white;
+}
+
+.btnNewPercorso:active ,.btnConferma:hover {
+ transform: scale(0.95);
+ transition: 0.1s;
+}
+
+.inserimentoPercorso{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-evenly;
+
+margin: 5px;
+width: 100%;
+}
+.inserimentoPercorso input{
+  height: 3rem;
+  width: 20vw;
+  
+}
+.inserimentoPercorso input::placeholder{
+  opacity: 0.8;
+}
+.gg-check-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 4px
+}
+.gg-check-r::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 3px;
+    top: -1px;
+    width: 6px;
+    height: 10px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    transform-origin: bottom left;
+    transform: rotate(45deg)
+}
+
+#inerimentoPerformance{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: -webkit-fill-available;
+}
+#inerimentoPerformance input{
+  width: 100%;
+  height: 3rem;
+ 
+}
+
+.divNavigatore{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+transform: translate(0,100%);
+}
+.carousel{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+}
+.divGraficoVelocita{
+  width: 100%;
+  background: #000;
+}
+
+/* navBar */
+
+nav{
+  min-height: 10vh;
+  width: 100%;
+  background-color: #000;
+}
+nav ul{
+  display: flex;
+column-gap: 5%;
+align-items: center;
+justify-content: flex-start;
+}
+nav ul li{
+  display: block;
+  list-style-type: none;
+  height: 100%;
+ 
+}
+nav ul li a{
+   color: white;
+    height: 100%;
+}
+
+.gestionePercorsi{
+  width: 100%;
+}
+.percosiUtente{
+  width: 100%;
+}
+  .rigaTragitto summary{  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+
+:where(.rigaTragitto,.rigaPerformance) span{
+  font-size: 2rem;
+}
+summary {
+    outline: none;
+    font-size: 3em;
+}
+
+summary::-webkit-details-marker {
+    display: none
+}
+
+summary:after {
+    background: #da291c;
+    border-color: #da291c;
+    border-radius: 15px;
+    content: "+";
+    color: #fff;
+    float: right;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 2%;
+    padding: 0.5%;
+    text-align: center;
+    width: 30px;
+}
+
+details[open] summary:after {
+    content: "-";
+}
+.rigaTragitto:nth-child(even){
+  background-color: rgb(108, 138, 192);
+}
+
+.rigaTragitto .descrizioneTragitti{
+  margin: 0 5% 0 5%;
+}
+.divPerformance{
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.rigaPerformance{
+  display: flex;
+  gap: 5%;
+  
+  align-items: center;
+  border-top: #000 solid 1px ;
+  
+
+}
+.rigaPerformance div{
+  display: flex;
+  align-items: center;
+
+ 
+}
+.rigaPerformance div div {
+  display: flex;
+  padding:  5% 2% 5% 2% ;
+  
+}
+.rigaPerformance .divStatistiche{
+  display: flex;
+  justify-content: flex-start;
+  flex: 5;
+  flex-wrap: wrap;
+}
+.btnGestione{
+  display: flex;
+  flex: 1;
+}
+
+#divModificaPerformance{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 100%;
+  
+  
+}
+#divModificaPerformance input{
+ width: 100%;
+}
+section legend{
+  font-size: 3em;
+  width: 100%;
+  text-align: center;
+}
+
+#gestioneUtente{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+#gestioneUtente .rigaDato{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+margin: 1%;
+font-size: 1.5em;
+border-bottom: #000 solid 1px;
+}
+
+.mediaKmPercorsi,.andaturaMedia,.tempoSforzo{
+width: 100%;
+}
+:where(.mediaKmPercorsi,.andaturaMedia,.tempoSforzo) legend{
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+}
+
+/* Area Allenatore */
+
+.btnSceltaAtelta {
+ display: inline-block;
+ padding: 12px 24px;
+ border: 1px solid #4f4f4f;
+ border-radius: 4px;
+ transition: all 0.2s ease-in;
+ position: relative;
+ overflow: hidden;
+ font-size: 19px;
+ color: black;
+ z-index: 1;
+}
+
+.btnSceltaAtelta:before {
+ content: "";
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%) scaleY(1) scaleX(1.25);
+ top: 100%;
+ width: 140%;
+ height: 180%;
+ background-color: rgba(0, 0, 0, 0.05);
+ border-radius: 50%;
+ display: block;
+ transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+ z-index: -1;
+}
+
+.btnSceltaAtelta:after {
+ content: "";
+ position: absolute;
+ left: 55%;
+ transform: translateX(-50%) scaleY(1) scaleX(1.45);
+ top: 180%;
+ width: 160%;
+ height: 190%;
+ background-color: #39bda7;
+ border-radius: 50%;
+ display: block;
+ transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+ z-index: -1;
+}
+
+.btnSceltaAtelta:hover {
+ color: #ffffff;
+ border: 1px solid #39bda7;
+}
+
+.btnSceltaAtelta:hover:before {
+ top: -35%;
+ background-color: #39bda7;
+ transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.btnSceltaAtelta:hover:after {
+ top: -45%;
+ background-color: #39bda7;
+ transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.sUnioneAtleti{
+  width: 50%;
+}
+.sUnioneAtleti form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sUnioneAtleti .invio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pagina Collegamento */
+
+.unioneDescrzione{
+  font-size: 1.5rem;
+}
+.frmInput{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+.frmInput input,button{
+  height: 10vh;
+  width: 70%
+}
+.selezioneAtleti{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+@media screen and (max-width:450px) {
+  nav ul{
+    justify-content: space-around;
+    padding: 0;
+  }
+  .tipoCorsa .statisticheMedie{
+    flex-direction: column;
+    gap: 1em;
+  }
+  .tipoCorsa .percorsi .rigaNomePercorso{
+flex-direction: column;
+  }
+  .inserimentoPercorso{
+    flex-direction: column;
+  }
+   .inserimentoPercorso input{
+    height: 3rem;
+    width: 100%;
+  }
+  .rigaTragitto{
+    padding: 16px;
+  }
+  summary::after{
+    width: 30%;
+    
+  }
+  summary{
+    font-size: 1em;
+  }
+  #gestioneUtente .rigaDato{
+    width: 100%;
+    padding: 0 16px 0 16px;
+    justify-content: space-around;
+  }
+  #gestioneUtente .rigaDato span{
+    flex: 1;
+  }
+  #gestioneUtente .rigaDato .celleDati{
+    flex: 3;
+  }
+}

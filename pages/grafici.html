@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleAreaUtenti.css">
+    <script src="../js/scriptUtenti.js"></script>
+    <script src="../js/jquery-3.7.0.js"></script>
+    <script src="../js/scriptGrafici.js"></script>
+    <script src="https://kit.fontawesome.com/ebb1b1fbd4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    
+    <title>We-Run Grafici</title>
+</head>
+
+<body onload="mostraGrafici('gMediaKm','gAndaturaMedia','gTempoSforzo')">
+    <nav>
+        <ul>
+            <li>
+                <a href="areaAccessoAtleta.php"> <i class="fa-solid fa-house fa-3x" style="color: #ffffff;"></i></a>
+            </li>
+            <li>
+
+                <lord-icon src="https://cdn.lordicon.com/gqdnbnwt.json" trigger="hover"
+                    colors="primary:#808080,secondary:#808080" style="width:4em; height:4em">
+                </lord-icon></i>
+
+            </li>
+            <li>
+                <a href="impostazioni.php"><i class="fa-solid fa-gear fa-3x" style="color: #ffffff;"></i></a>
+            </li>
+            <li>
+                <a href="../index.php"><i class="fa-solid fa-power-off fa-3x" style="color: #ffffff;"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="mediaKmPercorsi">
+        <legend> Chilometri Percorsi</legend>
+        <canvas id="gMediaKm"></canvas>
+    </div>
+
+    <div class="andaturaMedia">
+        <legend>Andatura</legend>
+        <canvas id="gAndaturaMedia"></canvas>
+    </div>
+
+    <div class="tempoSforzo">
+        <legend>Tempo sotto Sforzo</legend>
+        <canvas id="gTempoSforzo"></canvas>
+    </div>
+</body>
+
+</html>
